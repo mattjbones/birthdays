@@ -46,10 +46,10 @@ export default function Birthday({ birthdayData }) {
       </Head>
       <PageContainer backgroundUrl={backgroundUrl}>
         <div className={`border shadow rounded-md p-8 m-2 ${backgroundColour}`}>
-          <h1 className="font-extrabold text-center leading-tight text-6xl opacity-90">
+          <h1 className="font-extrabold text-center leading-tight text-3xl sm:text-6xl opacity-90">
             <TwoToneText first="Happy Birthday" second={name} />
           </h1>
-          <h2 className="text-4xl text-center py-2 space-y-2 opacity-90">
+          <h2 className="text-xl sm:text-3xl text-center py-2 space-y-2 opacity-90">
             <p>
               <TwoToneText
                 first={firstWord}
@@ -62,7 +62,7 @@ export default function Birthday({ birthdayData }) {
             <p>{restOfMessage}</p>
           </h2>
           {gifUrl ? (
-            <div className="relative align-center flex flex-1 my-4 w-96 h-96 m-auto">
+            <div className="relative align-center flex flex-1 my-4 w-60 h-60 sm:w-96 sm:h-96 m-auto">
               <Image
                 objectFit="contain"
                 layout="fill"

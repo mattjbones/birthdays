@@ -14,7 +14,7 @@ export default function PageContainer({ children, backgroundUrl }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className="min-h-screen flex flex-col px-2 items-center justify-center bg-fixed"
+        className="min-h-screen flex flex-col px-2 items-center justify-center sm:bg-fixed bg-cover"
         style={backgroundStyle}>
         <main className="flex flex-col py-20 max-w-3xl flex-1 justify-center align-center">
           {children}
