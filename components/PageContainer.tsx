@@ -1,9 +1,18 @@
+import * as React from 'react';
+import CSS from 'csstype';
 import Head from 'next/head';
-import Anchor from '../components/Anchor';
+import Anchor from './Anchor';
 
-export default function PageContainer({ children, backgroundUrl }) {
-  const backgroundStyle = backgroundUrl
-    ? { 'background-image': `url(${backgroundUrl})` }
+type Props = {
+  children: React.ReactNode;
+  backgroundUrl?: string;
+};
+export default function PageContainer({
+  children,
+  backgroundUrl,
+}: Props): React.ReactElement {
+  const backgroundStyle: CSS.Properties = backgroundUrl
+    ? { backgroundImage: `url(${backgroundUrl})` }
     : undefined;
   const footerStyle = backgroundUrl
     ? 'rounded-tl-lg rounded-tr-lg bg-opacity-75'
@@ -16,7 +25,7 @@ export default function PageContainer({ children, backgroundUrl }) {
       <div
         className="min-h-screen flex flex-col px-2 items-center justify-center sm:bg-fixed bg-cover"
         style={backgroundStyle}>
-        <main className="flex flex-col py-20 max-w-3xl flex-1 justify-center align-center">
+        <main className="flex flex-col py-20 max-w-3xl flex-1 justify-center">
           {children}
         </main>
         <footer

@@ -1,8 +1,9 @@
 module.exports = {
   purge: [
     './pages/**/*.{js,ts,jsx,tsx}',
+    './layouts/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './birthdays/**/*.json',
+    './lib/**/*.json',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -13,7 +14,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover'],
+      borderColor: ['hover'],
+    },
   },
   plugins: [],
 };

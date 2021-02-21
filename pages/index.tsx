@@ -1,9 +1,9 @@
+import * as React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import PageContainer from '../components/PageContainer';
 import TwoToneText from '../components/TwoToneText';
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   return (
     <>
       <Head>
