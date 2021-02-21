@@ -10,8 +10,7 @@ yarn dev
 
 ### TODO
 
-- Typescript
-- Build Edit / Create Post page
+- [In Progress] Build Edit / Create Post page
 - Connect a Database
 - Accounts / Auth
 - Landing Page
